@@ -6,7 +6,7 @@ int day_of_the_year(struct date indate)   // Die Funktion berechnet für ein gege
 {                                                   // Monat und Jahr die Nummer des Tages, gezählt von Jahresbeginn (1. Januar) an.
     int days[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
     int i;
-    int ergebnis = 0;
+    int result = 0;
     int leapyear;
     leapyear = is_leapyear(indate);
 
@@ -16,12 +16,12 @@ int day_of_the_year(struct date indate)   // Die Funktion berechnet für ein gege
     }
     for(i = 0; i < indate.month -1; i++)
     {
-        ergebnis += days[i];    // Bei jedem Durchlauf werden die Tage des Monats auf 'ergebnis' addiert, aber nur bis zum vorherigen Monat des
+        result += days[i];    // Bei jedem Durchlauf werden die Tage des Monats auf 'result' addiert, aber nur bis zum vorherigen Monat des
                                 // eingegebenen Monats.
     }
-    ergebnis += indate.day;        // Nun wird nur noch die Tag-Anzahl (die zu Begin eigegeben wurde) auf 'ergebnis' addiert.
+    result += indate.day;        // Nun wird nur noch die Tag-Anzahl (die zu Begin eigegeben wurde) auf 'result' addiert.
 
-    return ergebnis;
+    return result;
 }
 
 
