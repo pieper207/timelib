@@ -11,11 +11,11 @@
     struct date indate;
 
     // Es folgen Prototypen der Unterprogramme, damit der Copiler weiß, welche Werte diese übergeben bekommen und zurückgeben.
-    int day_of_the_year(indate.day, indate.month, indate.year);
-    int is_leapyear(int jahr);
-    int get_days_for_month(indate.month, indate.year);
-    int exists_date(int day, int month, int year);
-    void input_date(&(indate.day ,&(indate.month), &(indate.year));
+    int day_of_the_year(struct date indate);
+    int is_leapyear(struct date indate);
+    int get_days_for_month(struct date indate);
+    int exists_date(struct date indate);
+    struct date input_date();
 
 
 #endif // TIMELIB_H_INCLUDED
